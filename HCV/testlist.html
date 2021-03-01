@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TestList</title>
+    <style>
+        h1 {
+            margin: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .box {
+            margin: auto;
+            display: inline-block;
+            /* padding: 70px 0px; */
+            width: 20%;
+            /* justify-content: center; */
+            text-align: center;
+            /* text-decoration: none; */
+        }
+        
+        #box1 {
+            background-color: rgb(235, 155, 155);
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 10px 10px 5px grey;
+            margin: 50px 80px 80px 150px;
+            padding: 80px;
+            /* width: 50%; */
+            display: inline-block;
+            border: 2px solid black;
+            /* text-align: center; */
+            text-decoration: none;
+            color: white;
+        }
+        
+        #box2 {
+            /* background-color: rgb(190, 25, 25); */
+            color: rgb(26, 24, 24);
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 10px 10px 5px grey;
+            /* text-align: center; */
+            margin: 50px;
+            padding: 80px;
+            display: inline-block;
+            border: 2px solid black;
+        }
+        
+        #box1 ul li {
+            padding: 5px 0px;
+        }
+        
+        #box2 ul li {
+            padding: 5px 0px;
+        }
+        /* Popup container */
+        
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: black;
+        }
+        /* The actual popup (appears on top) */
+        
+        .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: rgb(245, 185, 185);
+            color: rgb(19, 17, 17);
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+        /* Popup arrow */
+        
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }
+        /* Add animation (fade in the popup) */
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>All the Tests are here:</h1>
+    <div class="box" id="box1">
+
+        <ul>
+
+            <div class="list">
+
+                <li> <a href="#" class="list">Bio-Chemistry</a></li>
+                <li><a href="#" class="list">Bone Densitomere</a></li>
+                <li> <a href="#" class="list">Bronocospy</a></li>
+                <li> <a href="#" class="list">Cardiac Test</a></li>
+                <li> <a href="#" class="list">Clinical Pathology</a></li>
+                <li> <a href="#" class="list">Colonoscopy</a></li>
+                <li> <a href="#" class="list">Contrast(Medicine)</a></li>
+                <li> <a href="#" class="list">CT-Scan</a></li>
+                <li><a href="#" class="list">Cyto Pathology</a></li>
+                <li> <a href="#" class="list">Video Endoscopy</a></li>
+
+            </div>
+
+        </ul>
+    </div>
+    <div class="box" id="box2">
+        <ul>
+            <div class="list">
+                <li> <a href="#" class="list">Dialysis</a></li>
+                <li> <a href="#" class="list">ENT</a></li>
+                <li> <a href="#" class="list">ERCP</a></li>
+                <li> <a href="#" class="list">Histapathalogy</a></li>
+                <li> <a href="mri.html" class="list">MRI</a>
+                    <div class="popup" onclick="myFunction()">MRI
+                        <span class="popuptext" id="myPopup">Day and time : Sunday-wednesday,<br> 10:00 a.m-4:00 p.m<br>Room no:304</span>
+                        <button type="button" class="button">Cost</button>
+                        <button type="button" class="button">Book Appoinment</button>
+                    </div>
+                </li>
+                <li> <a href="#" class="list">NeuroDiagnosis</a></li>
+                <li> <a href="#" class="list">Plastic Surgeon</a></li>
+                <li> <a href="#" class="list">X-Ray</a></li>
+                <li> <a href="#" class="list">Usg,Usg 3D/4D</a></li>
+                <li> <a href="#" class="list">Some Test Department</a></li>
+            </div>
+
+        </ul>
+        <!-- <div class="popup" onclick="myFunction()">Click me!
+            <span class="popuptext" id="myPopup">Popup text...</span>
+        </div> -->
+    </div>
+
+</body>
+
+</html>
